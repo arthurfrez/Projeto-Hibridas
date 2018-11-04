@@ -23,4 +23,10 @@ export class MainPage {
       });
   }
 
+  getDescription(id:number){
+    console.log(id);
+    this.navCtrl.push("DescriptionPage", {
+      id: id
+    })
+  }
 }

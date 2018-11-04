@@ -7,7 +7,7 @@
 
 <ion-content padding class="bkg-main-color">
   <ion-list>
-    <ion-item class="hero" *ngFor="let hero of heroes">
+    <ion-item class="hero" (click)="getDescription(hero.id)" *ngFor="let hero of heroes" class="bkg-main-color">
       <ion-avatar item-left>
         <img src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}">
       </ion-avatar>
