@@ -7,12 +7,9 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="bkg-main-color">
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle color="primary">Toggle Menu</button>
+<ion-content>
+  <ion-tabs tabs-only class="bkg-main-color">
+    <ion-tab tabTitle="Tab 1" [root]="mainPage"></ion-tab>
+    <ion-tab tabTitle="Tab 2" [root]="favPage"></ion-tab>
+  </ion-tabs>
 </ion-content>
