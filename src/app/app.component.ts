@@ -3,6 +3,9 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { AlertController } from 'ionic-angular';
+import { MenuController } from 'ionic-angular';
+
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
@@ -17,7 +20,10 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar,
+    public splashScreen: SplashScreen, public alertCtrl: AlertController,
+    public menuCtrl: MenuController) {
+
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -26,7 +32,6 @@ export class MyApp {
       { title: 'Account', component: LoginPage, icon: 'person' },
       { title: 'About', component: ListPage, icon: 'information-circle' }
     ];
-
   }
 
   initializeApp() {
@@ -42,5 +47,29 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  showConfirm() {
+    const confirm = this.alertCtrl.create({
+      title: 'Logoff',
+      message: 'Deseja mesmo sair da sua conta',
+      buttons:[
+        {
+          text: 'Aceitar',
+          handler: () => {
+            // Desloga
+            this.menuCtrl.close();
+          }
+        },
+        {
+          text: 'Recusar',
+
+          handler: () => {
+            this.menuCtrl.close();
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
 }
