@@ -1,0 +1,7 @@
+{
+  "name": "projeto_hibridas",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
