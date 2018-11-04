@@ -4,10 +4,7 @@ import 'rxjs/add/operator/map';
 import { Md5 } from 'ts-md5/dist/md5';
 
 /*
-  Generated class for the HeroServiceProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
+  Classe gerada para fazer acesso a API da Marvel.
 */
 @Injectable()
 export class HeroServiceProvider {
