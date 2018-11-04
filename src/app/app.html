@@ -8,6 +8,7 @@
   <ion-content class="bkg-main-color">
     <ion-list>
       <button class="bkg-secondary-color" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon [name]="p.icon" item-left></ion-icon>
         {{p.title}}
       </button>
     </ion-list>
