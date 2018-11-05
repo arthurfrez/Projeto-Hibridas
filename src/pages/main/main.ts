@@ -32,17 +32,21 @@ export class MainPage {
     })
   }
 
-  doInfinite(infiniteScroll) {
+  doInfinite(infiniteScroll): Promise<any> {
     console.log('Begin async operation');
 
-    setTimeout(() => {
-      for (let i = 0; i < 20; i++) {
-        this.heroes.push( this.items.length );
-      }
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        this.heroProvider.load()
+          .then(data => {
+            this.obj = data;
+            this.heroes = this.obj.data.results;
+          });
 
-      console.log('Async operation has ended');
-      infiniteScroll.complete();
-    }, 500);
+        console.log('Async operation has ended');
+        resolve();
+      }, 500);
+    })
   }
 
 }

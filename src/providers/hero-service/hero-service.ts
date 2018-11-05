@@ -9,7 +9,7 @@ import { Md5 } from 'ts-md5/dist/md5';
 @Injectable()
 export class HeroServiceProvider {
   data: any;
-  offset: Number = 0;
+  offset: Number = -20;
 
   constructor(public http: Http) {
     console.log('Hello MovieServiceProvider Provider');
@@ -19,6 +19,9 @@ export class HeroServiceProvider {
     if(this.data) {
       return Promise.resolve(this.data);
     }
+
+    // incremento para scroll infinito
+    this.offset += 20;
 
     return new Promise(resolve => {
 
