@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { MainPage } from '../main/main';
-import { FavoritesPage } from '../favorites/favorites';
+import { ComicsPage } from '../comics/comics';
 
 @Component({
   selector: 'page-home',
@@ -11,7 +11,7 @@ import { FavoritesPage } from '../favorites/favorites';
 export class HomePage {
 
   mainPage = MainPage;
-  favPage = FavoritesPage;
+  favPage = ComicsPage;
 
   constructor(public navCtrl: NavController) {
 

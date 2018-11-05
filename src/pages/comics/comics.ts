@@ -4,10 +4,10 @@ import { NavController } from 'ionic-angular';
 import { ComicServiceProvider } from '../../providers/comic-service/comic-service';
 
 @Component({
-  selector: 'favorites-main',
-  templateUrl: 'favorites.html'
+  selector: 'comics-main',
+  templateUrl: 'comics.html'
 })
-export class FavoritesPage {
+export class ComicsPage {
 
   starColor: string = 'light';
 
