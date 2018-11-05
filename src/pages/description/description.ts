@@ -38,8 +38,4 @@ export class DescriptionPage {
     });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DescriptionPage');
-  }
-
 }

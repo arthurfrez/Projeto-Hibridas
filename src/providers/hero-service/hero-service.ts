@@ -12,7 +12,7 @@ export class HeroServiceProvider {
   offset: Number = -20;
 
   constructor(public http: Http) {
-    console.log('Hello MovieServiceProvider Provider');
+    
   }
 
   load() {
