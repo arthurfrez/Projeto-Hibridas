@@ -9,6 +9,8 @@ import { HeroServiceProvider } from '../../providers/hero-service/hero-service';
 })
 export class MainPage {
 
+  starColor: string = 'light';
+
   constructor(public navCtrl: NavController,
     public heroProvider: HeroServiceProvider) {
 
