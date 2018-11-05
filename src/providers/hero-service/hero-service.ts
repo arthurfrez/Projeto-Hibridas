@@ -9,6 +9,7 @@ import { Md5 } from 'ts-md5/dist/md5';
 @Injectable()
 export class HeroServiceProvider {
   data: any;
+  offset: Number = 0;
 
   constructor(public http: Http) {
     console.log('Hello MovieServiceProvider Provider');
@@ -28,7 +29,7 @@ export class HeroServiceProvider {
         '2e38bfa776e241f7437c8569f782f153731c0a7e8f18039296e1ddc535b38be95d9edf20'
       );
 
-      this.http.get(`https://gateway.marvel.com:443/v1/public/characters?ts=${timestamp}&orderBy=name&limit=20&apikey=8f18039296e1ddc535b38be95d9edf20&hash=${hash}`)
+      this.http.get(`https://gateway.marvel.com:443/v1/public/characters?ts=${timestamp}&orderBy=name&offset=${this.offset}&limit=20&apikey=8f18039296e1ddc535b38be95d9edf20&hash=${hash}`)
         .map(res => res.json())
         .subscribe(data => {
           this.data = data;
