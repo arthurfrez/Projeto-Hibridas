@@ -8,6 +8,7 @@ aplicativo hibrido.
 * [Ionic](https://ionicframework.com)
 * [Angular](https://angular.io)
 * [Cordova](https://cordova.apache.org)
+* [TS-MD5](https://www.npmjs.com/package/ts-md5) - Implementação da criptografia MD5 para TypeScript
 
 ## Autores
 
