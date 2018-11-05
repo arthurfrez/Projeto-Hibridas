@@ -12,7 +12,8 @@ import { LoginPage } from '../pages/login/login';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HeroServiceProvider } from '../providers/hero-service/hero-service';
-import { HttpModule } from '@angular/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ComicServiceProvider } from '../providers/comic-service/comic-service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -41,7 +42,9 @@ import { HttpModule } from '@angular/http';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    HeroServiceProvider
+    HttpClient,
+    HeroServiceProvider,
+    ComicServiceProvider
   ]
 })
 export class AppModule {}

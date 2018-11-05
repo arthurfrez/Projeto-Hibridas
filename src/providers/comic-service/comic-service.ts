@@ -7,7 +7,7 @@ import { Md5 } from 'ts-md5/dist/md5';
   Classe gerada para fazer acesso a API da Marvel.
 */
 @Injectable()
-export class HeroServiceProvider {
+export class ComicServiceProvider {
   data: any;
   offset: Number = -20;
 
@@ -31,7 +31,7 @@ export class HeroServiceProvider {
       );
 
       this.http.get(
-        `https://gateway.marvel.com:443/v1/public/characters?ts=${timestamp}&orderBy=name&offset=${this.offset}&limit=20&apikey=8f18039296e1ddc535b38be95d9edf20&hash=${hash}`
+        `https://gateway.marvel.com:443/v1/public/comics?ts=${timestamp}&orderBy=title&offset=${this.offset}&limit=20&apikey=8f18039296e1ddc535b38be95d9edf20&hash=${hash}`
       )
       .subscribe(data => {
           this.data = data;
@@ -50,7 +50,7 @@ export class HeroServiceProvider {
 
       this.http
         .get(
-          `https://gateway.marvel.com:443/v1/public/characters/${id}?ts=${timestamp}&apikey=8f18039296e1ddc535b38be95d9edf20&hash=${hash}`
+          `https://gateway.marvel.com:443/v1/public/comics/${id}?ts=${timestamp}&apikey=8f18039296e1ddc535b38be95d9edf20&hash=${hash}`
         )
         .subscribe(data => {
           this.data = data;

@@ -1,10 +1,24 @@
 <!--
-  Generated template for the FavoritesPage page.
+  Generated template for the MainPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
 
 <ion-content padding class="bkg-main-color">
-  <h1>Favs</h1>
+  <ion-list>
+    <ion-item class="comic" *ngFor="let comic of comics" class="bkg-main-color">
+      <ion-avatar item-left (click)="getDescription(comic.id)">
+        <img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}">
+      </ion-avatar>
+      <button item-right icon-only ion-button outline [color]="starColor">
+        <ion-icon name="star-outline"></ion-icon>
+      </button>
+      <h2 (click)="getDescription(comic.id)">{{comic.title}}</h2>
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite())">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+ </ion-infinite-scroll>
 </ion-content>
