@@ -11,9 +11,6 @@
       <ion-avatar item-left (click)="getDescription(comic.id)">
         <img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}">
       </ion-avatar>
-      <button item-right icon-only ion-button outline [color]="starColor">
-        <ion-icon name="star-outline"></ion-icon>
-      </button>
       <h2 (click)="getDescription(comic.id)">{{comic.title}}</h2>
     </ion-item>
   </ion-list>
