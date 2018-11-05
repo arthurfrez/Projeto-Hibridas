@@ -52,19 +52,19 @@ export class MyApp {
   showConfirm() {
     const confirm = this.alertCtrl.create({
       title: 'Logoff',
-      message: 'Deseja mesmo sair da sua conta',
+      message: 'Do you really wish to logoff?',
       buttons:[
         {
-          text: 'Aceitar',
+          text: 'Refuse',
+
           handler: () => {
-            // Desloga
             this.menuCtrl.close();
           }
         },
         {
-          text: 'Recusar',
-
+          text: 'Accept',
           handler: () => {
+            // Desloga
             this.menuCtrl.close();
           }
         }
