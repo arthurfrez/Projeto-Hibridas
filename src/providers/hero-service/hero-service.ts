@@ -28,7 +28,7 @@ export class HeroServiceProvider {
         '2e38bfa776e241f7437c8569f782f153731c0a7e8f18039296e1ddc535b38be95d9edf20'
       );
 
-      this.http.get(`https://gateway.marvel.com:443/v1/public/characters?ts=${timestamp}&orderBy=name&limit=10&apikey=8f18039296e1ddc535b38be95d9edf20&hash=${hash}`)
+      this.http.get(`https://gateway.marvel.com:443/v1/public/characters?ts=${timestamp}&orderBy=name&limit=20&apikey=8f18039296e1ddc535b38be95d9edf20&hash=${hash}`)
         .map(res => res.json())
         .subscribe(data => {
           this.data = data;
@@ -49,7 +49,7 @@ export class HeroServiceProvider {
 
       this.http
         .get(
-          `https://gateway.marvel.com:443/v1/public/characters/${id}?ts=${timestamp}&orderBy=name&limit=20&apikey=8f18039296e1ddc535b38be95d9edf20&hash=${hash}`
+          `https://gateway.marvel.com:443/v1/public/characters/${id}?ts=${timestamp}&apikey=8f18039296e1ddc535b38be95d9edf20&hash=${hash}`
         )
         .map(res => res.json())
         .subscribe(data => {
