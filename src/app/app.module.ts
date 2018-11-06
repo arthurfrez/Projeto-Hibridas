@@ -4,7 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { AboutPage } from '../pages/about/about';
 import { MainPage } from '../pages/main/main';
 import { ComicsPage } from '../pages/comics/comics';
 
@@ -18,7 +18,7 @@ import { ComicServiceProvider } from '../providers/comic-service/comic-service';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
+    AboutPage,
     MainPage,
     ComicsPage,
   ],
@@ -31,7 +31,7 @@ import { ComicServiceProvider } from '../providers/comic-service/comic-service';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
+    AboutPage,
     MainPage,
     ComicsPage,
   ],

@@ -7,7 +7,7 @@ import { AlertController } from 'ionic-angular';
 import { MenuController } from 'ionic-angular';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { AboutPage } from '../pages/about/about';
 
 @Component({
   templateUrl: 'app.html'
@@ -28,7 +28,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage, icon: 'home' },
-      { title: 'About', component: ListPage, icon: 'information-circle' }
+      { title: 'About', component: AboutPage, icon: 'information-circle' }
     ];
   }
 
