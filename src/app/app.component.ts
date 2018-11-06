@@ -8,7 +8,6 @@ import { MenuController } from 'ionic-angular';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import { LoginPage } from '../pages/login/login';
 
 @Component({
   templateUrl: 'app.html'
@@ -29,7 +28,6 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage, icon: 'home' },
-      { title: 'Account', component: LoginPage, icon: 'person' },
       { title: 'About', component: ListPage, icon: 'information-circle' }
     ];
   }
