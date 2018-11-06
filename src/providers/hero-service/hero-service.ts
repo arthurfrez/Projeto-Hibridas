@@ -9,7 +9,7 @@ import { Md5 } from 'ts-md5/dist/md5';
 @Injectable()
 export class HeroServiceProvider {
   data: any;
-  offset: Number = -20;
+  offset: number = -20;
 
   constructor(public http: HttpClient) {
 

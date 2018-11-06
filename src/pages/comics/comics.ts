@@ -8,7 +8,8 @@ import { ComicServiceProvider } from '../../providers/comic-service/comic-servic
   templateUrl: 'comics.html'
 })
 export class ComicsPage {
-
+  obj: any;
+  comics: any;
   starColor: string = 'light';
 
   constructor(public navCtrl: NavController,

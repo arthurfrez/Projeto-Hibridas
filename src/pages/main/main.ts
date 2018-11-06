@@ -8,7 +8,8 @@ import { HeroServiceProvider } from '../../providers/hero-service/hero-service';
   templateUrl: 'main.html'
 })
 export class MainPage {
-
+  obj: any;
+  heroes: any;
   starColor: string = 'light';
 
   constructor(public navCtrl: NavController,
