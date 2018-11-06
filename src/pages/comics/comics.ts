@@ -27,7 +27,7 @@ export class ComicsPage {
 
   getDescription(id:number){
     console.log(id);
-    this.navCtrl.push("DescriptionPage", {
+    this.navCtrl.push("ComicDescriptionPage", {
       id: id
     })
   }
